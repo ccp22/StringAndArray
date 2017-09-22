@@ -27,20 +27,21 @@
 
 		public function chopFunc() {
 			echo '<h1>String chop() function</h1>';
-			$str = "Chandni Patel<br>";
+			$str = "Chandni    Patel";
+
 			echo chop($str,"Patel");
 			echo '<hr>';
 		}
 
 		public function splitStringFunc() {
 			echo '<h1>String str_split() function</h1>';
-			print_r(str_split("Hello"));
+			print_r(str_split("Chandni"));
 			echo '<hr>';
 		}
 
 		public function caseCompareStringFunc() {
 			echo '<h1>String strcasecmp() function</h1>';
-			echo strcasecmp("Chandni","Chandni Patel");
+			echo strcasecmp("Chandni","chandni Patel");
 			echo '<hr>';
 		}
 
@@ -104,6 +105,8 @@
 	$strObj->countCharsFunc();
 	$strObj->chunkSplitFunc();
 
+	echo '<br><br><br><br><br><br><br><br><br><br><br>';
+
 	class myArray {
 
 		public function __construct() {
@@ -159,7 +162,7 @@
 
 		public function sortFunc() {
 			echo '<h1>Array sort() function</h1>';
-			$a=array("ABC","DEF","GHI","JKL");
+			$a=array("DEF","XYZ","ABC","MNO");
 			sort($a);
 			print_r ($a);
 			echo '<hr>';
@@ -176,14 +179,14 @@
 
 		public function arrayCountFunc() {
 			echo '<h1>Array array_count_values() function</h1>';
-			$a=array("NJ","NY","CA","PA","FL");
+			$a=array("NJ","NY","CA","PA","FL","NJ");
 			print_r(array_count_values($a));
 			echo '<hr>';
 		}
 
 		public function arrayFillFunc() {
 			echo '<h1>Array array_fill() function</h1>';
-			$a1=array_fill(1,4,"New Jersey");
+			$a1=array_fill(2,3,"New Jersey");
 			print_r($a1);
 			echo '<hr>';
 		}
@@ -191,7 +194,7 @@
 		public function arrayChunkFunc() {
 			echo '<h1>Array array_chunk() function</h1>';
 			$a=array("NJ","NY","CA","PA","FL","OH");
-			print_r(array_chunk($a,2));
+			print_r(array_chunk($a,4));
 			echo '<hr>';
 		}
 
