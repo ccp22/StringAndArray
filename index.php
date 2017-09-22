@@ -161,6 +161,7 @@
 			echo '<h1>Array sort() function</h1>';
 			$a=array("ABC","DEF","GHI","JKL");
 			sort($a);
+			print_r ($a);
 			echo '<hr>';
 		}
 
