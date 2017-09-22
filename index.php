@@ -15,13 +15,13 @@
 	
 		public function __construct() {
 
-			echo 'hello i\'m an Object </br>';
+			echo 'myString object created. </br>';
 
 		}
 
 		public function __destruct() {
 
-			echo '</br> I\'m Done';
+			echo '</br> myString Object done.';
 
 		}
 
@@ -40,7 +40,7 @@
 
 		public function caseCompareStringFunc() {
 			echo '<h1>String strcasecmp() function</h1>';
-			echo strcasecmp("NJIT","njit");
+			echo strcasecmp("Chandni","Chandni Patel");
 			echo '<hr>';
 		}
 
@@ -84,7 +84,7 @@
 
 		public function chunkSplitFunc() {
 			echo '<h1>String chunk_split() function</h1>';
-			$str = "Chandni Dobi";
+			$str = "Chandni Patel";
 			echo chunk_split($str,1,".");
 			echo '<hr>';
 		}
@@ -103,6 +103,111 @@
 	$strObj->implodeFunc();
 	$strObj->countCharsFunc();
 	$strObj->chunkSplitFunc();
+
+	class myArray {
+
+		public function __construct() {
+
+			echo 'myArray object created. </br>';
+
+		}
+
+		public function __destruct() {
+
+			echo '</br> myArray Object done.';
+
+		}
+
+		public function arrayPushFunc() {
+			echo '<h1>Array array_push() function</h1>';
+			$a=array("NJ","NY");
+			array_push($a,"CA","PA");
+			print_r($a);
+			echo '<hr>';
+		}
+
+		public function arraySumFunc() {
+			echo '<h1>Array array_sum() function</h1>';
+			$a=array(123,456,78);
+			echo array_sum($a);
+			echo '<hr>';
+		}
+
+		public function arraySpliceFunc() {
+			echo '<h1>Array array_splice() function</h1>';
+			$a1=array("a"=>"NJ","b"=>"NY","c"=>"CA","d"=>"PA");
+			$a2=array("a"=>"New Jersey","b"=>"New York");
+			array_splice($a1,0,2,$a2);
+			print_r($a1);
+			echo '<hr>';
+		}
+
+		public function arraySliceFunc() {
+			echo '<h1>Array array_slice() function</h1>';
+			$a=array("NJ","NY","CA","PA","FL");
+			print_r(array_slice($a,2));
+			echo '<hr>';
+		}
+
+		public function arrayShiftFunc() {
+			echo '<h1>Array array_shif() function</h1>';
+			$a=array("a"=>"NJ","b"=>"NY","c"=>"CA");
+			echo array_shift($a);
+			print_r ($a);
+			echo '<hr>';
+		}
+
+		public function sortFunc() {
+			echo '<h1>Array sort() function</h1>';
+			$a=array("ABC","DEF","GHI","JKL");
+			sort($a);
+			echo '<hr>';
+		}
+
+		public function shuffleFunc() {
+			echo '<h1>Array shuffle() function</h1>';
+			$a = array("NJ","NY","CA","PA","FL");
+			sort($a);
+			shuffle($a);
+			print_r($a);
+			echo '<hr>';
+		}
+
+		public function arrayCountFunc() {
+			echo '<h1>Array array_count_values() function</h1>';
+			$a=array("NJ","NY","CA","PA","FL");
+			print_r(array_count_values($a));
+			echo '<hr>';
+		}
+
+		public function arrayFillFunc() {
+			echo '<h1>Array array_fill() function</h1>';
+			$a1=array_fill(1,4,"New Jersey");
+			print_r($a1);
+			echo '<hr>';
+		}
+
+		public function arrayChunkFunc() {
+			echo '<h1>Array array_chunk() function</h1>';
+			$a=array("NJ","NY","CA","PA","FL","OH");
+			print_r(array_chunk($a,2));
+			echo '<hr>';
+		}
+
+	}
+
+	$arrObj = new myArray();
+	
+	$arrObj->arrayPushFunc();
+	$arrObj->arraySumFunc();
+	$arrObj->arraySpliceFunc();
+	$arrObj->arraySliceFunc();
+	$arrObj->arrayShiftFunc();
+	$arrObj->sortFunc();
+	$arrObj->shuffleFunc();
+	$arrObj->arrayCountFunc();
+	$arrObj->arrayFillFunc();
+	$arrObj->arrayChunkFunc();
 
 
 ?>
